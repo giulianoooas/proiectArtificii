@@ -17,9 +17,7 @@ export const Home = () => {
             standard Bootstrap core components. Feel free to use this template
             for any project you want!
           </p>
-          <a className="btn btn-primary" href="#!">
-            Call to Action!
-          </a>
+          <a className="btn btn-primary">Call to Action!</a>
         </div>
       </div>
 
@@ -44,9 +42,7 @@ export const Home = () => {
               </p>
             </div>
             <div className="card-footer">
-              <a className="btn btn-primary btn-sm" href="#!">
-                More Info
-              </a>
+              <a className="btn btn-primary btn-sm">More Info</a>
             </div>
           </div>
         </div>
@@ -62,9 +58,7 @@ export const Home = () => {
               </p>
             </div>
             <div className="card-footer">
-              <a className="btn btn-primary btn-sm" href="#!">
-                More Info
-              </a>
+              <a className="btn btn-primary btn-sm">More Info</a>
             </div>
           </div>
         </div>
@@ -79,9 +73,7 @@ export const Home = () => {
               </p>
             </div>
             <div className="card-footer">
-              <a className="btn btn-primary btn-sm" href="#!">
-                More Info
-              </a>
+              <a className="btn btn-primary btn-sm">More Info</a>
             </div>
           </div>
         </div>
