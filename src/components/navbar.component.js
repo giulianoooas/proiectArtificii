@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -6,9 +6,9 @@ export const Navbar = () => {
       <div className="container px-5">
         <div>
           {/* <img src="./assets/logo.png" alt="logo" className="logo-image" /> */}
-          {/* <Link to="/"> */}
-          <span className="navbar-brand">Sky firework</span>
-          {/* </Link> */}
+          <Link to="/">
+            <span className="navbar-brand">Sky firework</span>
+          </Link>
         </div>
 
         <button
@@ -25,19 +25,17 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              {/* <Link to="/"> */}
-              <span className="nav-link active" aria-current="page">
-                Home
-              </span>
-              {/* </Link> */}
+              <Link to="/">
+                <span className="nav-link">Home</span>
+              </Link>
             </li>
             <li className="nav-item">
               <span className="nav-link">About</span>
             </li>
             <li className="nav-item">
-              {/* <Link to="/contact"> */}
-              <span className="nav-link">Contact</span>
-              {/* </Link> */}
+              <Link to="/contact">
+                <span className="nav-link">Contact</span>
+              </Link>
             </li>
             <li className="nav-item">
               <span className="nav-link">Services</span>
