@@ -8,7 +8,8 @@ export const Navbar = () => {
   let currentPath = location.pathname;
   const paths = {
     home: "/",
-    contact: "/contact",
+    about: "/about",
+    services: "/services",
   };
 
   const putClass = (page) => {
@@ -52,15 +53,14 @@ export const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <span className={putClass("about")}>About</span>
-            </li>
-            <li className="nav-item">
-              <Link to="/contact">
-                <span className={putClass("contact")}>Contact</span>
+              <Link to="/about">
+                <span className={putClass("about")}>About</span>
               </Link>
             </li>
             <li className="nav-item">
-              <span className={putClass("services")}>Services</span>
+              <Link to="/services">
+                <span className={putClass("services")}>Services</span>
+              </Link>
             </li>
           </ul>
         </div>

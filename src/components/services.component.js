@@ -1,21 +1,18 @@
-export const About = () => {
-    return (
-      <div className="container px-4 px-lg-5 lead">
-        <div className="gx-4 gx-lg-5 align-items-center my-5 text-center">
-          <div>
-            <h1 className="mb-5">
-              This is a template that is great for small businesses. It doesn't
-              have too much fancy flare to it, but it makes a great use of the
-              standard Bootstrap core components. Feel free to use this template
-              for any project you want!
-            </h1>
-            <p>This is a template that is great for small businesses. It doesn't
-              have too much fancy flare to it, but it makes a great use of the
-              standard Bootstrap core components. Feel free to use this template
-              for any project you want!</p>
-          </div>
+export const Services = () => {
+  return (
+    <div className="container px-4 px-lg-5 lead">
+      <div className="gx-4 gx-lg-5 align-items-center my-5 text-center">
+        <div>
+          <h1 className="mb-5">Services</h1>
+          <p>
+            This is a template that is great for small businesses. It doesn't
+            have too much fancy flare to it, but it makes a great use of the
+            standard Bootstrap core components. Feel free to use this template
+            for any project you want!
+          </p>
         </div>
-        <div className="row gx-4 gx-lg-5 align-items-center my-5">
+      </div>
+      <div className="row gx-4 gx-lg-5 align-items-center my-5">
         <div className="col-lg-7">
           <img
             className="img-fluid rounded mb-4 mb-lg-0"
@@ -28,32 +25,34 @@ export const About = () => {
             This is a template that is great for small businesses. It doesn't
             have too much fancy flare to it, but it makes a great use of the
             standard Bootstrap core components. Feel free to use this template
-            for any project you want!This is a template that is great for small businesses. It doesn't
-              have too much fancy flare to it, but it makes a great use of the
-              standard Bootstrap core components. Feel free to use this template
-              for any project you want
+            for any project you want!This is a template that is great for small
+            businesses. It doesn't have too much fancy flare to it, but it makes
+            a great use of the standard Bootstrap core components. Feel free to
+            use this template for any project you want
           </p>
         </div>
-  
+
         <div className="gx-4 gx-lg-5 align-items-center my-5 text-center kbd lead">
           <div>
-            <p>This is a template that is great for small businesses. It doesn't
+            <p>
+              This is a template that is great for small businesses. It doesn't
               have too much fancy flare to it, but it makes a great use of the
               standard Bootstrap core components. Feel free to use this template
-              for any project you want!This is a template that is great for small businesses. It doesn't
-              have too much fancy flare to it, but it makes a great use of the
-              standard Bootstrap core components. Feel free to use this template
-              for any project you wantThis is a template that is great for small businesses. It doesn't
-              have too much fancy flare to it, but it makes a great use of the
-              standard Bootstrap core components. Feel free to use this template
-              for any project you wantThis is a template that is great for small businesses. It doesn't
-              have too much fancy flare to it, but it makes a great use of the
-              standard Bootstrap core components. Feel free to use this template
-              for any project you want</p>
+              for any project you want!This is a template that is great for
+              small businesses. It doesn't have too much fancy flare to it, but
+              it makes a great use of the standard Bootstrap core components.
+              Feel free to use this template for any project you wantThis is a
+              template that is great for small businesses. It doesn't have too
+              much fancy flare to it, but it makes a great use of the standard
+              Bootstrap core components. Feel free to use this template for any
+              project you wantThis is a template that is great for small
+              businesses. It doesn't have too much fancy flare to it, but it
+              makes a great use of the standard Bootstrap core components. Feel
+              free to use this template for any project you want
+            </p>
           </div>
         </div>
       </div>
-      </div>
-    );
-  };
-  
+    </div>
+  );
+};

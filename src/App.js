@@ -1,12 +1,11 @@
 import "./App.css";
 import "./styles/styles.css";
-import "./components/navbar.component";
 import { Navbar } from "./components/navbar.component";
 import { Footer } from "./components/footer.component";
 import { Home } from "./components/home.component";
-import { Contact } from "./components/contact.component";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { About } from "./components/about.component";
+import { Services } from "./components/services.component";
 
 function App() {
   return (
@@ -15,8 +14,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </BrowserRouter>
       <Footer />
