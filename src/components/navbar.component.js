@@ -1,5 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import "../styles/navbar.component.css";
+import logo from "../assests/logoPar.png";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -25,6 +27,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container px-5">
         <div>
+          <img src={logo} alt="logo" className="logo-image" />
           <Link to="/">
             <span className="navbar-brand">Sky firework</span>
           </Link>
