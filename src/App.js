@@ -3,7 +3,7 @@ import "./styles/styles.css";
 import { Navbar } from "./components/navbar.component";
 import { Footer } from "./components/footer.component";
 import { Home } from "./components/home.component";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
 import { About } from "./components/about.component";
 import { Services } from "./components/services.component";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -12,7 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -20,7 +20,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </div>
   );
