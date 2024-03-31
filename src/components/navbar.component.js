@@ -36,13 +36,13 @@ export const Navbar = () => {
 
     switch (currentPath) {
       case paths["home"]:
-        title += " - home";
+        title += " - Home";
         break;
       case paths["about"]:
-        title += " - about";
+        title += " - About";
         break;
       case paths["services"]:
-        title += " - services";
+        title += " - Services";
         break;
       default:
         break;
