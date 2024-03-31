@@ -6,22 +6,34 @@ import logo from "../assests/logoPar.png";
 export const Navbar = () => {
   const location = useLocation();
   let currentPath = location.pathname;
+
   const paths = {
     home: "/",
     about: "/about",
     services: "/services",
   };
-
-  const putClass = (page) => {
-    let className = "nav-link";
-    if (currentPath === paths[page]) {
-      className = `${className} active`;
-    }
-    return className;
+  const pageClasses = {
+    home: "nav-link",
+    about: "nav-link",
+    services: "nav-link",
   };
+
+  const putClasses = () => {
+    for (const pageName of Object.keys(pageClasses)) {
+      let className = "nav-link";
+
+      if (currentPath === paths[pageName]) {
+        className = `${className} active`;
+      }
+
+      pageClasses[pageName] = className;
+    }
+  };
+  putClasses();
 
   useEffect(() => {
     currentPath = location.pathname;
+    putClasses();
   }, [location]);
 
   return (
@@ -49,17 +61,17 @@ export const Navbar = () => {
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link to="/">
-                <span className={putClass("home")}>Home</span>
+                <span className={pageClasses["home"]}>Home</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/about">
-                <span className={putClass("about")}>About</span>
+                <span className={pageClasses["about"]}>About</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/services">
-                <span className={putClass("services")}>Services</span>
+                <span className={pageClasses["services"]}>Services</span>
               </Link>
             </li>
           </ul>
