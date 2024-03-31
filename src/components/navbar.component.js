@@ -31,9 +31,31 @@ export const Navbar = () => {
   };
   putClasses();
 
+  const setTabTile = () => {
+    let title = "Sky firework";
+
+    switch (currentPath) {
+      case paths["home"]:
+        title += " - home";
+        break;
+      case paths["about"]:
+        title += " - about";
+        break;
+      case paths["services"]:
+        title += " - services";
+        break;
+      default:
+        break;
+    }
+
+    document.title = title;
+  };
+  setTabTile();
+
   useEffect(() => {
     currentPath = location.pathname;
     putClasses();
+    setTabTile();
   }, [location]);
 
   return (
