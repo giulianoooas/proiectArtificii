@@ -63,8 +63,11 @@ export const Services = () => {
           </p>
         </div>
       </div>
-      {cards.map((card) => (
-        <div className="card text-white bg-secondary my-5 text-center">
+      {cards.map((card, idx) => (
+        <div
+          className="card text-white bg-secondary my-5 text-center"
+          key={idx}
+        >
           <div className="card-body">
             <div className="row gx-4 gx-lg-5 align-items-center my-5">
               <h1 className="mb-5">{card.title}</h1>
