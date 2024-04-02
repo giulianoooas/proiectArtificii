@@ -5,55 +5,51 @@ import logo from "../assests/logoPar.png";
 
 export const Navbar = () => {
   const location = useLocation();
-  let currentPath = location.pathname;
-
-  const paths = {
-    home: "/",
-    about: "/about",
-    services: "/services",
-  };
-  const pageClasses = {
-    home: "nav-link",
-    about: "nav-link",
-    services: "nav-link",
+  const navbarItems = {
+    home: {
+      path: "/",
+      label: "Home",
+      className: "nav-item",
+    },
+    about: {
+      path: "/about",
+      label: "About",
+      className: "nav-item",
+    },
+    services: {
+      path: "/services",
+      label: "Services",
+      className: "nav-item",
+    },
   };
 
   const putClasses = () => {
-    for (const pageName of Object.keys(pageClasses)) {
+    Object.values(navbarItems).forEach((navbarItem) => {
       let className = "nav-link";
 
-      if (currentPath === paths[pageName]) {
+      if (navbarItem.path === location.pathname) {
         className = `${className} active`;
       }
 
-      pageClasses[pageName] = className;
-    }
+      navbarItem.className = className;
+    });
   };
   putClasses();
 
   const setTabTile = () => {
     let title = "Sky firework";
 
-    switch (currentPath) {
-      case paths["home"]:
-        title += " - Home";
-        break;
-      case paths["about"]:
-        title += " - About";
-        break;
-      case paths["services"]:
-        title += " - Services";
-        break;
-      default:
-        break;
-    }
+    Object.values(navbarItems).forEach((navbarItem) => {
+      if (navbarItem.path === location.pathname) {
+        title += ` - ${navbarItem.label}`;
+      }
+    });
 
     document.title = title;
   };
   setTabTile();
 
   useEffect(() => {
-    currentPath = location.pathname;
     putClasses();
     setTabTile();
   }, [location]);
@@ -81,21 +77,15 @@ export const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link to="/">
-                <span className={pageClasses["home"]}>Home</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/about">
-                <span className={pageClasses["about"]}>About</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/services">
-                <span className={pageClasses["services"]}>Services</span>
-              </Link>
-            </li>
+            {Object.entries(navbarItems).map(([page, navbarItem]) => (
+              <li className="nav-item" key={page}>
+                <Link to={navbarItem.path}>
+                  <span className={navbarItem.className}>
+                    {navbarItem.label}
+                  </span>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
