@@ -1,4 +1,28 @@
 export const Home = () => {
+  const cards = [
+    {
+      title: "Card one",
+      text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+      magni quas ex numquam, maxime minus quam molestias corporis
+      quod, ea minima accusamus.`,
+      buttonLabel: "More info",
+    },
+    {
+      title: "Card two",
+      text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+      magni quas ex numquam, maxime minus quam molestias corporis
+      quod, ea minima accusamus.`,
+      buttonLabel: "More info",
+    },
+    {
+      title: "Card three",
+      text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+      magni quas ex numquam, maxime minus quam molestias corporis
+      quod, ea minima accusamus.`,
+      buttonLabel: "More info",
+    },
+  ];
+
   return (
     <div className="container px-4 px-lg-5">
       <div className="row gx-4 gx-lg-5 align-items-center my-5">
@@ -17,7 +41,7 @@ export const Home = () => {
             standard Bootstrap core components. Feel free to use this template
             for any project you want!
           </p>
-          <a className="btn btn-primary">Call to Action!</a>
+          <a className="btn btn-primary custom-button-color">Call to Action!</a>
         </div>
       </div>
 
@@ -31,52 +55,23 @@ export const Home = () => {
       </div>
 
       <div className="row gx-4 gx-lg-5">
-        <div className="col-md-4 mb-5">
-          <div className="card h-100">
-            <div className="card-body">
-              <h2 className="card-title">Card One</h2>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-                magni quas ex numquam, maxime minus quam molestias corporis
-                quod, ea minima accusamus.
-              </p>
-            </div>
-            <div className="card-footer">
-              <a className="btn btn-primary btn-sm">More Info</a>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4 mb-5">
-          <div className="card h-100">
-            <div className="card-body">
-              <h2 className="card-title">Card Two</h2>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-                tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem
-                sunt quam eaque, vel, non in id dolore voluptates quos eligendi
-                labore.
-              </p>
-            </div>
-            <div className="card-footer">
-              <a className="btn btn-primary btn-sm">More Info</a>
+        {cards.map((card, idx) => (
+          <div className="col-md-4 mb-5" key={idx}>
+            <div className="card h-100">
+              <div className="card-body">
+                <h2 className="card-title">{card.title}</h2>
+                <p className="card-text">{card.text}</p>
+              </div>
+              <div className="card-footer">
+                {card.buttonLabel && (
+                  <a className="btn btn-primary btn-sm custom-button-color">
+                    {card.buttonLabel}
+                  </a>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-md-4 mb-5">
-          <div className="card h-100">
-            <div className="card-body">
-              <h2 className="card-title">Card Three</h2>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-                magni quas ex numquam, maxime minus quam molestias corporis
-                quod, ea minima accusamus.
-              </p>
-            </div>
-            <div className="card-footer">
-              <a className="btn btn-primary btn-sm">More Info</a>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
