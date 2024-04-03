@@ -2,11 +2,11 @@ export const Services = () => {
   const cards = [
     {
       title: "Service 1",
-      description: `This is a template that is great for small businesses. It
+      description: `This is a template that is great for businesses. It
     doesn't have too much fancy flare to it, but it makes a great
     use of the standard Bootstrap core components. Feel free to use
     this template for any project you want!This is a template that
-    is great for small businesses. It doesn't have too much fancy
+    is great for businesses. It doesn't have too much fancy
     flare to it, but it makes a great use of the standard Bootstrap
     core components. Feel free to use this template for any project
     you want`,
@@ -14,11 +14,11 @@ export const Services = () => {
     },
     {
       title: "Service 2",
-      description: `This is a template that is great for small businesses. It
+      description: `This is a template that is great for businesses. It
     doesn't have too much fancy flare to it, but it makes a great
     use of the standard Bootstrap core components. Feel free to use
     this template for any project you want!This is a template that
-    is great for small businesses. It doesn't have too much fancy
+    is great for businesses. It doesn't have too much fancy
     flare to it, but it makes a great use of the standard Bootstrap
     core components. Feel free to use this template for any project
     you want`,
@@ -26,11 +26,11 @@ export const Services = () => {
     },
     {
       title: "Service 3",
-      description: `This is a template that is great for small businesses. It
+      description: `This is a template that is great for businesses. It
     doesn't have too much fancy flare to it, but it makes a great
     use of the standard Bootstrap core components. Feel free to use
     this template for any project you want!This is a template that
-    is great for small businesses. It doesn't have too much fancy
+    is great for businesses. It doesn't have too much fancy
     flare to it, but it makes a great use of the standard Bootstrap
     core components. Feel free to use this template for any project
     you want`,
@@ -38,11 +38,11 @@ export const Services = () => {
     },
     {
       title: "Service 4",
-      description: `This is a template that is great for small businesses. It
+      description: `This is a template that is great for businesses. It
     doesn't have too much fancy flare to it, but it makes a great
     use of the standard Bootstrap core components. Feel free to use
     this template for any project you want!This is a template that
-    is great for small businesses. It doesn't have too much fancy
+    is great for businesses. It doesn't have too much fancy
     flare to it, but it makes a great use of the standard Bootstrap
     core components. Feel free to use this template for any project
     you want`,
@@ -55,19 +55,16 @@ export const Services = () => {
       <div className="gx-4 gx-lg-5 align-items-center my-5 text-center">
         <div>
           <h1 className="mb-5">Services</h1>
-          <p>
-            This is a template that is great for small businesses. It doesn't
-            have too much fancy flare to it, but it makes a great use of the
-            standard Bootstrap core components. Feel free to use this template
-            for any project you want!
+          <p className="custom-text-color">
+            This is a template that is great for businesses. It doesn't have too
+            much fancy flare to it, but it makes a great use of the standard
+            Bootstrap core components. Feel free to use this template for any
+            project you want!
           </p>
         </div>
       </div>
       {cards.map((card, idx) => (
-        <div
-          className="card text-white bg-secondary my-5 text-center"
-          key={idx}
-        >
+        <div className="card custom-info-card my-5 text-center" key={idx}>
           <div className="card-body">
             <div className="row gx-4 gx-lg-5 align-items-center my-5">
               <h1 className="mb-5">{card.title}</h1>

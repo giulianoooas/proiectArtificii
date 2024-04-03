@@ -55,7 +55,7 @@ export const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container px-5">
         <div>
           <img src={logo} alt="logo" className="logo-image" />
