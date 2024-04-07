@@ -1,17 +1,17 @@
 export const Services = (props) => {
   const cards = props.cardsServices ?? [];
+  const paragraphs = props.servicesPageParagraphs ?? [];
 
   return (
     <div className="container px-4 px-lg-5 lead">
       <div className="gx-4 gx-lg-5 align-items-center my-5 text-center">
         <div>
-          <h1 className="mb-5">Services</h1>
-          <p className="custom-text-color">
-            This is a template that is great for businesses. It doesn't have too
-            much fancy flare to it, but it makes a great use of the standard
-            Bootstrap core components. Feel free to use this template for any
-            project you want!
-          </p>
+          <h1 className="mb-5">{props.servicesPageTitle ?? ""}</h1>
+          {paragraphs.map((paragraph, idx) => (
+            <p className="custom-text-color" key={idx}>
+              {paragraph}
+            </p>
+          ))}
         </div>
       </div>
       {cards.map((card, idx) => (

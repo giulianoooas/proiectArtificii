@@ -9,7 +9,11 @@ import { Services } from "./components/services.component";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { navbarItems } from "./constants/navbar.constants";
-import { cardsServices } from "./constants/services.constants";
+import {
+  cardsServices,
+  servicesPageParagraphs,
+  servicesPageTitle,
+} from "./constants/services.constants";
 import {
   cardsHome,
   homeImageSrc,
@@ -40,7 +44,13 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route
             path="/services"
-            element={<Services cardsServices={cardsServices} />}
+            element={
+              <Services
+                cardsServices={cardsServices}
+                servicesPageTitle={servicesPageTitle}
+                servicesPageParagraphs={servicesPageParagraphs}
+              />
+            }
           />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
