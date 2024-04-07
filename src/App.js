@@ -8,16 +8,22 @@ import { About } from "./components/about.component";
 import { Services } from "./components/services.component";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { navbarItems } from "./constants/navbar.constants";
+import { cardsServices } from "./constants/services.constants";
+import { cardsHome } from "./constants/home.constants";
 
 function App() {
   return (
     <div className="App">
       <HashRouter>
-        <Navbar />
+        <Navbar navbarItems={navbarItems} />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home cardsHome={cardsHome} />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+          <Route
+            path="/services"
+            element={<Services cardsServices={cardsServices} />}
+          />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </HashRouter>

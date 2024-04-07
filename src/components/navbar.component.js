@@ -3,25 +3,9 @@ import { useEffect } from "react";
 import "../styles/navbar.component.css";
 import logo from "../assests/logoPar.png";
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   const location = useLocation();
-  const navbarItems = {
-    home: {
-      path: "/",
-      label: "Home",
-      className: "nav-item",
-    },
-    about: {
-      path: "/about",
-      label: "About",
-      className: "nav-item",
-    },
-    services: {
-      path: "/services",
-      label: "Services",
-      className: "nav-item",
-    },
-  };
+  const navbarItems = props.navbarItems ?? [];
 
   const putClasses = () => {
     Object.values(navbarItems).forEach((navbarItem) => {
