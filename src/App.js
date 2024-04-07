@@ -10,7 +10,13 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { navbarItems } from "./constants/navbar.constants";
 import { cardsServices } from "./constants/services.constants";
-import { cardsHome } from "./constants/home.constants";
+import {
+  cardsHome,
+  homeImageSrc,
+  homePageInfoObject,
+  homePageParagraphs,
+  homeTitle,
+} from "./constants/home.constants";
 
 function App() {
   return (
@@ -18,7 +24,19 @@ function App() {
       <HashRouter>
         <Navbar navbarItems={navbarItems} />
         <Routes>
-          <Route exact path="/" element={<Home cardsHome={cardsHome} />} />
+          <Route
+            exact
+            path="/"
+            element={
+              <Home
+                cardsHome={cardsHome}
+                homeImageSrc={homeImageSrc}
+                homeTitle={homeTitle}
+                homePageParagraphs={homePageParagraphs}
+                homePageInfoObject={homePageInfoObject}
+              />
+            }
+          />
           <Route path="/about" element={<About />} />
           <Route
             path="/services"
